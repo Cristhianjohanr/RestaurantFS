@@ -10,7 +10,7 @@ export default function Dishes() {
   useEffect(() => {
     async function fetchDishes() {
       try {
-        const res = await fetch("https://restaurantfs.onrender.com//api/dishes");
+        const res = await fetch("https://restaurantfs.onrender.com/api/dishes");
         const data = await res.json();
         setDishes(data);
       } catch (err) {
