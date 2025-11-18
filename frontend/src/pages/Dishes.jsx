@@ -10,7 +10,7 @@ export default function Dishes() {
   useEffect(() => {
     async function fetchDishes() {
       try {
-        const res = await fetch("http://localhost:4000/api/dishes");
+        const res = await fetch("https://restaurantfs.onrender.com//api/dishes");
         const data = await res.json();
         setDishes(data);
       } catch (err) {
@@ -25,7 +25,7 @@ export default function Dishes() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:4000/api/dishes", {
+      const res = await fetch("https://restaurantfs.onrender.com/api/dishes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, price: parseFloat(price) }),
